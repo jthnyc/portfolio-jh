@@ -8,16 +8,13 @@ export default function Navbar() {
       <Link href="/">
         <a>繁</a>
       </Link>
-      <Link href="/">
+      <Link href="/About">
         <a>About</a>
       </Link>
-      <Link href="/experience">
-        <a>Experience</a>
-      </Link>
-      <Link href="/projects">
+      <Link href="/Projects">
         <a>Projects</a>
       </Link>
-      <Link href="/contact">
+      <Link href="/Contact">
         <a>Contact</a>
       </Link>
       <Link href="/resume">

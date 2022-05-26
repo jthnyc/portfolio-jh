@@ -7,7 +7,7 @@ export const About = () => {
     <AboutSection>
       <AboutImage>
         <Image
-          src="/src/images/profile.png"
+          src="/public/images/profile.png"
           width={500}
           height={500}
           alt="Picture of Joanna Huang"
