@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     #root {
         white-space: pre-line;
     }

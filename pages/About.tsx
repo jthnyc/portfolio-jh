@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { device } from "../src/device";
-// import Image from "next/image";
+import Image from "next/image";
+import profile from "../public/images/profile.png";
 
 export const About = () => {
   return (
     <AboutSection>
-      <h2>About Me</h2>
+      <h2 id="About">About Me</h2>
       <AboutContent>
         <div>
           <p>
@@ -44,11 +45,7 @@ export const About = () => {
           </TechList>
         </div>
         <ImageContainer>
-          <img
-            src="https://source.unsplash.com/photos/yMSecCHsIBc"
-            width={350}
-            height={500}
-          />
+          <Image src={profile} width={350} height={500} />
         </ImageContainer>
         <ImageFrame></ImageFrame>
       </AboutContent>
