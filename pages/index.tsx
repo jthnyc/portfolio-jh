@@ -6,6 +6,7 @@ import Sidebar from "../src/components/SideBar";
 import Hero from "./Hero";
 import About from "./About";
 import Projects from "./Projects";
+import Contact from "./Contact";
 import { device } from "../src/device";
 
 export default function Index() {
@@ -22,6 +23,7 @@ export default function Index() {
         <Hero />
         <About />
         <Projects />
+        <Contact />
       </Main>
     </div>
   );
@@ -44,6 +46,15 @@ const Main = styled.main`
 
   & > section {
     background-color: #04386c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    color: #edf5e1;
+    padding: 0rem;
+    margin: 0 auto;
 
     &:not(last-child) {
       margin-bottom: 7.5rem;

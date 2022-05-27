@@ -45,21 +45,23 @@ export const Projects = () => {
   return (
     <ProjectSection>
       <h2>Projects</h2>
-      {projects.map((project) => (
-        <ProjectContainer>
-          <ImagePlaceHolder>Image placeholder</ImagePlaceHolder>
-          <div>
-            <ProjectTitle>{project.title}</ProjectTitle>
-            <ProjectDescription>{project.description}</ProjectDescription>
-            <ProjectStack>{project.stack}</ProjectStack>
-            <Link href={project.github}>
-              <a target="_blank" rel="noreferrer noopener">
-                <FontAwesomeIcon icon={faGithubSquare} />
-              </a>
-            </Link>
-          </div>
-        </ProjectContainer>
-      ))}
+      <ProjectsContainer>
+        {projects.map((project) => (
+          <ProjectContainer>
+            <ImagePlaceHolder>Image placeholder</ImagePlaceHolder>
+            <div>
+              <ProjectTitle>{project.title}</ProjectTitle>
+              <ProjectDescription>{project.description}</ProjectDescription>
+              <ProjectStack>{project.stack}</ProjectStack>
+              <Link href={project.github}>
+                <a target="_blank" rel="noreferrer noopener">
+                  <FontAwesomeIcon icon={faGithubSquare} />
+                </a>
+              </Link>
+            </div>
+          </ProjectContainer>
+        ))}
+      </ProjectsContainer>
     </ProjectSection>
   );
 };
@@ -68,16 +70,19 @@ export default Projects;
 
 const ProjectSection = styled.section`
   display: flex;
-  flex-direction: column;
   min-height: 80vh;
   width: 100%;
   color: #edf5e1;
   padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 1000px;
 
   & h2 {
     margin-bottom: 2rem;
   }
 `;
+
+const ProjectsContainer = styled.div``;
 
 const ProjectContainer = styled.div`
   border: 1px solid red;
@@ -109,7 +114,7 @@ const ProjectTitle = styled.h3`
 const ProjectDescription = styled.p`
   padding: 1.5rem 0.25rem;
   height: 4rem;
-  width: 100%;
+  width: 120%;
   background-color: lightgrey;
   color: black;
   z-index: 1;
@@ -120,6 +125,7 @@ const ProjectStack = styled.p`
   height: 4rem;
   background-color: lightblue;
   color: black;
+  width: 120%;
 `;
 
 const ImagePlaceHolder = styled.div`

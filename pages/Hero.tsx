@@ -26,15 +26,7 @@ export const Hero = () => {
 export default Hero;
 
 const HeroSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 80vh;
-  width: 100%;
-  height: calc(100vh - 4rem);
-  color: #edf5e1;
-  padding: 0 5rem;
+  max-width: 1000px;
 
   & a {
     color: #aa7bc3;

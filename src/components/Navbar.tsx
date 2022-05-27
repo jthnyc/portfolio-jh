@@ -31,6 +31,7 @@ const Nav = styled.nav`
   background-color: #fafafa;
   padding: 0.5rem 0.75rem 0.5rem 2rem;
   position: fixed;
+  z-index: 10;
 
   & > a {
     margin: 0.5rem 0.5rem;
