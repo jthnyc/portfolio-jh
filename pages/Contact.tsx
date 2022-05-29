@@ -14,15 +14,6 @@ export default function Contact() {
 const ContactSection = styled.section`
   max-width: 1000px;
   align-items: center;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   min-height: 80vh;
-  //   width: 100%;
-  //   height: calc(100vh - 4rem);
-  //   color: #edf5e1;
-  //   padding: 2rem 5rem;
 `;
 
 const ContactButton = styled.button`
