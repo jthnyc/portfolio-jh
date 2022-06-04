@@ -11,14 +11,12 @@
     "test": "jest --watchAll --env=jsdom"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.16",
     "express": "^4.17.2",
+    "feather-icons": "^4.29.0",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-feather": "^2.0.10",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",

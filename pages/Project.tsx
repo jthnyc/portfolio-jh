@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { device } from "../src/device";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import { GitHub, ExternalLink } from 'react-feather';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,12 +31,12 @@ const Project = ({
         <ProjectLinks>
           <Link href={github}>
             <a target="_blank" rel="noreferrer noopener">
-              <FontAwesomeIcon icon={faGithubSquare} />
+              <GitHub />
             </a>
           </Link>
           <Link href={link}>
             <a target="_blank" rel="noreferrer noopener">
-              Link
+              <ExternalLink />
             </a>
           </Link>
         </ProjectLinks>

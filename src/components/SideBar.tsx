@@ -1,29 +1,28 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAt } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { device } from "../device";
+import { GitHub, Linkedin, AtSign } from 'react-feather';
 
 export default function Navbar() {
   return (
     <SidebarContainer>
       <SidebarList>
         <Link href="https://github.com/jthnyc">
-          <a>
-            <FontAwesomeIcon icon={faGithubSquare} />
+          <a target="_blank" rel="noreferrer noopener">
+            <GitHub />
           </a>
         </Link>
         <Link href="https://www.linkedin.com/in/joannathhuang/">
-          <a>
-            <FontAwesomeIcon icon={faLinkedin} />
+          <a target="_blank" rel="noreferrer noopener">
+            <Linkedin />
           </a>
         </Link>
         <Link href="mailto:joannathhuang@gmail.com">
-          <a>
-            <FontAwesomeIcon icon={faAt} />
+          <a target="_blank" rel="noreferrer noopener">
+            <AtSign />
           </a>
         </Link>
+        
       </SidebarList>
     </SidebarContainer>
   );

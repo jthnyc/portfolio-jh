@@ -16,6 +16,7 @@ export default function Index() {
       <Head>
         <title>Joanna Huang</title>
         <meta name="description" content="Portfolio Site for Joanna Huang" />
+        <script src="path/to/dist/feather.js"></script>
       </Head>
       <Navbar />
       <Sidebar />
