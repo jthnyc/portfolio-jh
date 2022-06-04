@@ -47,7 +47,7 @@ export const About = () => {
         <ImageContainer>
           <Image src={profile} width={350} height={500} />
         </ImageContainer>
-        <ImageFrame></ImageFrame>
+        {/* <ImageFrame></ImageFrame> */}
       </AboutContent>
     </AboutSection>
   );
@@ -82,15 +82,15 @@ const ImageContainer = styled.div`
   z-index: 5;
 `;
 
-const ImageFrame = styled.div`
-  border: 1px solid red;
-  position: absolute;
-  top: 1300px;
-  right: 130px;
-  width: 21.875rem;
-  height: 31.25rem;
-  z-index: 1;
-`;
+// const ImageFrame = styled.div`
+//   border: 1px solid red;
+//   position: absolute;
+//   top: 1300px;
+//   right: 130px;
+//   width: 21.875rem;
+//   height: 31.25rem;
+//   z-index: 1;
+// `;
 
 const TechList = styled.div`
   margin-top: 2rem;
