@@ -29,7 +29,7 @@ const HeroSection = styled.section`
   max-width: 1000px;
 
   & a {
-    color: #aa7bc3;
+    color: #ff9b71;
     font-weight: bold;
   }
 
@@ -48,13 +48,6 @@ const HeroSection = styled.section`
   }
 
   @media ${device.sm} {
-    & h2 {
-      font-size: 1.5rem;
-    }
-
-    & p {
-      margin-top: 1.5rem;
-      max-width: 20rem;
-    }
+    padding-top: 7.5rem;
   }
 `;

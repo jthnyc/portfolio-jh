@@ -60,12 +60,10 @@ const Nav = styled.nav`
 
   @media ${device.sm} {
     flex-direction: column;
-    order: 1;
+    z-index: 10;
 
     &:first-child {
-      position: relative;
       font-size: 0.85rem;
-      order: 2;
     }
   }
 `;

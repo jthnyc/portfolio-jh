@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../src/device";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
@@ -60,8 +61,13 @@ const ProjectContainer = styled.li`
   gap: 0.625rem;
 
   &:nth-child(odd) {
-    flex-direction: row-reverse;
-    grid-column-start: 2;
+    &:first-child {
+      grid-area: 1 / 6 / -1 / -1;
+    }
+
+    &:last-child {
+      grid-area: 1 / 1/ -1 / 5;
+    }
   }
 
   & > a {
@@ -83,6 +89,11 @@ const ProjectContent = styled.div`
   grid-column: 7/-1;
   position: relative;
   grid-area: 1 / 1 / -1 / 5;
+
+  @media ${device.md} {
+    grid-area: 1 / 2 / -1 / 11;
+    z-index: 10;
+  }
 `;
 
 const ProjectImage = styled.div`
@@ -91,23 +102,40 @@ const ProjectImage = styled.div`
   grid-area: 1 / 6 / -1 / -1;
   position: relative;
   z-index: 1;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media ${device.md} {
+    grid-area: 1 / 1 / -1 / -1;
+    z-index: 1;
+    opacity: .3;
+  }
 `;
 
 const ProjectTitle = styled.h3`
   font-size: 1.2em;
   margin: 1.25rem 0rem;
   display: flex;
-  font-style: italic;
-  color: #aa7bc3;
+  color: #ff9b71;
+  z-index: 1;
 `;
 
 const ProjectDescription = styled.p`
-  padding: 1rem 1rem;
+  padding: 0rem 1rem 2rem;
   padding-left: 0rem;
   height: 4rem;
   width: 120%;
   color: white;
-  z-index: 2;
+  z-index: 1;
+
+  @media ${device.md} {
+    padding: 0rem 1rem 1rem;
+    padding-left: 0rem;
+  }
+
 `;
 
 const ProjectStack = styled.code`
@@ -115,8 +143,11 @@ const ProjectStack = styled.code`
   padding-left: 0rem;
   height: 4rem;
   color: white;
-  width: 120%;
-  z-index: 2;
+  z-index: 1;
+
+  @media ${device.md} {
+    padding: 1rem 0rem;
+  }
 `;
 
 const ProjectLinks = styled.div`

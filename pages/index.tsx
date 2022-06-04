@@ -39,13 +39,12 @@ export default function Index() {
 // };
 
 const Main = styled.main`
-  // height: calc(100vh - 4rem);
-  background-color: #04386c;
+  background-color: var(--prussianblue);
   padding: 0 10rem;
   width: 100%;
 
   & > section {
-    background-color: #04386c;
+    background-color: var(--prussianblue);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,8 +63,11 @@ const Main = styled.main`
     padding: 0;
 
     & > section {
-      display: block;
       padding: 0 1.5rem;
+
+      &:not(last-child) {
+        margin-bottom: 12.5rem;
+      }
     }
   }
 `;

@@ -8,7 +8,7 @@ export const About = () => {
     <AboutSection>
       <h2 id="About">About Me</h2>
       <AboutContent>
-        <div>
+        <AboutText>
           <p>
             Hey there! I'm Joanna and I enjoy creating pixel perfect things for
             the web. As a former teacher, I saw there was a gap between how
@@ -43,11 +43,10 @@ export const About = () => {
               <li>SalesForce Commerce Cloud</li>
             </ul>
           </TechList>
-        </div>
+        </AboutText>
         <ImageContainer>
           <Image src={profile} width={420} height={500} />
         </ImageContainer>
-        {/* <ImageFrame></ImageFrame> */}
       </AboutContent>
     </AboutSection>
   );
@@ -64,7 +63,7 @@ const AboutSection = styled.section`
     line-height: 1.5rem;
   }
 
-  @media ${device.sm} {
+  @media ${device.md} {
     & p {
       margin-top: 1.5rem;
       max-width: 20rem;
@@ -77,42 +76,26 @@ const AboutContent = styled.div`
   grid-template-columns: 3fr 2fr;
   gap: 5rem;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     display: block;
+  }
+`;
+
+const AboutText = styled.div`
+  @media ${device.md} {
+    margin-bottom: 50px;
   }
 `;
 
 const ImageContainer = styled.div`
   position: relative;
   z-index: 5;
-
-// const ImageFrame = styled.div`
-//   border: 1px solid red;
-//   position: absolute;
-//   top: 1300px;
-//   right: 130px;
-//   width: 21.875rem;
-//   height: 31.25rem;
-//   z-index: 1;
-// `;
-//   @media ${device.sm} {
-//     position: relative;
-//     max-width: 300px;
-//   }
-// `;
-
-// const ImageFrame = styled.div`
-//   border: 1px solid red;
-//   position: absolute;
-//   top: 1300px;
-//   right: 130px;
-//   width: 21.875rem;
-//   height: 31.25rem;
-//   z-index: 1;
-// `;
+`;
 
 const TechList = styled.div`
   margin-top: 2rem;
+  font-weight: 800;
+
   & ul {
     display: grid;
     grid-template-columns: 2fr 2fr;
