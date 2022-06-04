@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function Contact() {
   return (
     <ContactSection>
-      <h1>Let's connect!</h1>
+      <h1 id="Contact">Let's connect!</h1>
       <ContactButton>
         <a href="emailto:joannathhuang@gmail.com">Say Hello</a>
       </ContactButton>
@@ -12,15 +12,8 @@ export default function Contact() {
 }
 
 const ContactSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 1000px;
   align-items: center;
-  min-height: 80vh;
-  width: 100%;
-  height: calc(100vh - 4rem);
-  color: #edf5e1;
-  padding: 2rem 5rem;
 `;
 
 const ContactButton = styled.button`

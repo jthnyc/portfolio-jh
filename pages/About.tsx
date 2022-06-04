@@ -45,7 +45,7 @@ export const About = () => {
           </TechList>
         </div>
         <ImageContainer>
-          <Image src={profile} width={350} height={500} />
+          <Image src={profile} width={420} height={500} />
         </ImageContainer>
         {/* <ImageFrame></ImageFrame> */}
       </AboutContent>
@@ -57,6 +57,7 @@ export default About;
 
 const AboutSection = styled.section`
   max-width: 1000px;
+  align-items: flex-start;
 
   & p {
     margin-top: 2rem;
@@ -75,12 +76,30 @@ const AboutContent = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 5rem;
+
+  @media ${device.sm} {
+    display: block;
+  }
 `;
 
 const ImageContainer = styled.div`
   position: relative;
   z-index: 5;
-`;
+
+// const ImageFrame = styled.div`
+//   border: 1px solid red;
+//   position: absolute;
+//   top: 1300px;
+//   right: 130px;
+//   width: 21.875rem;
+//   height: 31.25rem;
+//   z-index: 1;
+// `;
+//   @media ${device.sm} {
+//     position: relative;
+//     max-width: 300px;
+//   }
+// `;
 
 // const ImageFrame = styled.div`
 //   border: 1px solid red;

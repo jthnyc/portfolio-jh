@@ -14,11 +14,13 @@ export default function Navbar() {
       <Link href="#Projects">
         <a>Projects</a>
       </Link>
-      <Link href="/Contact">
+      <Link href="#Contact">
         <a>Contact</a>
       </Link>
-      <Link href="/resume">
-        <a>Resume</a>
+      <Link href="https://drive.google.com/file/d/1FZEw2C4qzf7d_fnoT67i98MGjfrASFDX/view?usp=sharing">
+        <a target="_blank" rel="noreferrer noopener">
+          Resume
+        </a>
       </Link>
     </Nav>
   );
