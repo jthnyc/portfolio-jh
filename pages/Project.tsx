@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export interface ProjectDetails {
   id: number;
-  img: string;
+  img: StaticImageData;
   title: string;
   description: string;
   stack: string;
