@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
     html {
         scroll-behavior: smooth;
+        scroll-padding-top: 9rem;
     }
 
     #root {
