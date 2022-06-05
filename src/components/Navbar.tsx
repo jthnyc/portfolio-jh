@@ -7,14 +7,14 @@ export default function NavBar() {
   return (
     <NavigationBar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <NavContainer>
-        <Navbar.Brand href="/">繁</Navbar.Brand>
+        {/* <Navbar.Brand href="/">繁</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
           <Navigation>
             <Nav.Link href="#About">About</Nav.Link>
             <Nav.Link href="#Projects">Projects</Nav.Link>
             <Nav.Link href="#Contact">Contact</Nav.Link>
-            <Nav.Link href="https://drive.google.com/file/d/1FZEw2C4qzf7d_fnoT67i98MGjfrASFDX/view?usp=sharing" target="_blank" rel="noreferrer noopener">Resume</Nav.Link>
+            <Nav.Link href="https://drive.google.com/file/d/1rSBj68wNNAn7MLEm6LEY1Z8Xevw6mAHE/view?usp=sharing" target="_blank" rel="noreferrer noopener">Resume</Nav.Link>
           </Navigation>
         </Navbar.Collapse>
       </NavContainer>
