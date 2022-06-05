@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../src/device";
 import { Send } from 'react-feather';
 
 export default function Contact() {
@@ -30,6 +31,11 @@ const ContactSection = styled.section`
 
   & p {
     margin-bottom: 2rem;
+    max-width: 36rem;
+
+    @media ${device.sm} {
+      max-width: 18.75rem;
+    }
   }
 `;
 
@@ -50,10 +56,5 @@ const ContactButton = styled.button`
   & svg {
     position: relative;
     left: -10px;
-  }
-
-  & span {
-    position: relative;
-    top: -5px;
   }
 `;

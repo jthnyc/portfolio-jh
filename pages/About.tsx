@@ -100,5 +100,11 @@ const TechList = styled.div`
     display: grid;
     grid-template-columns: 2fr 2fr;
     gap: 1rem 5rem;
+
+    @media ${device.md} {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0rem;
+    }
   }
 `;

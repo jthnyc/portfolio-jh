@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import GlobalStyle from "../src/globalStyles";
 import Head from "next/head";
-import Navbar from "../src/components/Navbar";
+import NavBar from "../src/components/NavBar";
 import Sidebar from "../src/components/SideBar";
 import Hero from "./Hero";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { device } from "../src/device";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Index() {
   return (
@@ -18,7 +19,9 @@ export default function Index() {
         <meta name="description" content="Portfolio Site for Joanna Huang" />
         <script src="path/to/dist/feather.js"></script>
       </Head>
-      <Navbar />
+      <Header>
+        <NavBar />
+      </Header>
       <Sidebar />
       <Main>
         <Hero />
@@ -38,6 +41,12 @@ export default function Index() {
 //     </Layout>
 //   );
 // };
+
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const Main = styled.main`
   background-color: var(--prussianblue);

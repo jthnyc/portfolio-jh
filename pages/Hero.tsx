@@ -28,6 +28,10 @@ export default Hero;
 const HeroSection = styled.section`
   max-width: 1000px;
 
+  & code {
+    color: white;
+  }
+
   & a {
     color: #ff9b71;
     font-weight: bold;
