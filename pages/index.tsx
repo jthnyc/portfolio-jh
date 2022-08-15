@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import GlobalStyle from "../src/globalStyles";
 import Head from "next/head";
-import Navbar from "../src/components/Navbar";
+import NavBar from "../src/components/NavBar";
 import Sidebar from "../src/components/SideBar";
 import Hero from "./Hero";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { device } from "../src/device";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Index() {
   return (
@@ -16,8 +17,11 @@ export default function Index() {
       <Head>
         <title>Joanna Huang</title>
         <meta name="description" content="Portfolio Site for Joanna Huang" />
+        <script src="path/to/dist/feather.js"></script>
       </Head>
-      <Navbar />
+      <Header>
+        <NavBar />
+      </Header>
       <Sidebar />
       <Main>
         <Hero />
@@ -38,14 +42,19 @@ export default function Index() {
 //   );
 // };
 
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const Main = styled.main`
-  // height: calc(100vh - 4rem);
-  background-color: #04386c;
+  background-color: var(--prussianblue);
   padding: 0 10rem;
   width: 100%;
 
   & > section {
-    background-color: #04386c;
+    background-color: var(--prussianblue);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,8 +73,11 @@ const Main = styled.main`
     padding: 0;
 
     & > section {
-      display: block;
       padding: 0 1.5rem;
+
+      &:not(last-child) {
+        margin-bottom: 12.5rem;
+      }
     }
   }
 `;

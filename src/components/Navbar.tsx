@@ -1,71 +1,93 @@
-import Link from "next/link";
 import styled from "styled-components";
 import { device } from "../device";
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import alignright from '../../public/images/alignright.svg';
 
-export default function Navbar() {
+export default function NavBar() {
   return (
-    <Nav>
-      <Link href="/">
-        <a>繁</a>
-      </Link>
-      <Link href="#About">
-        <a>About</a>
-      </Link>
-      <Link href="#Projects">
-        <a>Projects</a>
-      </Link>
-      <Link href="#Contact">
-        <a>Contact</a>
-      </Link>
-      <Link href="https://drive.google.com/file/d/1FZEw2C4qzf7d_fnoT67i98MGjfrASFDX/view?usp=sharing">
-        <a target="_blank" rel="noreferrer noopener">
-          Resume
-        </a>
-      </Link>
-    </Nav>
+    <NavigationBar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <NavContainer>
+        {/* <Navbar.Brand href="/">繁</Navbar.Brand> */}
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+          <Navigation>
+            <Nav.Link href="#About">About</Nav.Link>
+            <Nav.Link href="#Projects">Projects</Nav.Link>
+            <Nav.Link href="#Contact">Contact</Nav.Link>
+            <Nav.Link href="https://drive.google.com/file/d/1rSBj68wNNAn7MLEm6LEY1Z8Xevw6mAHE/view?usp=sharing" target="_blank" rel="noreferrer noopener">Resume</Nav.Link>
+          </Navigation>
+        </Navbar.Collapse>
+      </NavContainer>
+    </NavigationBar>
   );
 }
 
-const Nav = styled.nav`
+const NavigationBar = styled(Navbar)`
+  background-color: var(--prussianblue) !important;
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  background-color: #fafafa;
-  padding: 0.5rem 0.75rem 0.5rem 2rem;
-  position: fixed;
-  z-index: 10;
 
-  & > a {
-    margin: 0.5rem 0.5rem;
-    text-decoration: none;
-    padding: 0.75rem 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.025em;
-    border: none;
-    transition: all 0.125s ease;
-    font-size: 0.875rem;
-    color: black;
+  & a {
+    color: white !important;
 
-    &:hover {
-      color: blue;
+    &:not(last-child) {
+      margin-right: 1.125rem;
     }
 
-    &:first-child {
-      position: absolute;
-      left: 0.9375rem;
-      top: 0.3125rem;
-      font-size: 1.125rem;
+    &:last-child {
+      border: 1px solid white;
+      border-radius: 0.5rem;
+    }
+  }
+`;
+
+const NavContainer = styled(Container)`
+  background-color: var(--prussianblue);
+  padding-top: 15px;
+  max-width: 2400px;
+  padding-left: 3.125rem;
+
+  & button {
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    & span {
+      // background-image: url(${alignright}) !important;
     }
   }
 
   @media ${device.sm} {
-    flex-direction: column;
-    order: 1;
+    padding-left: 1.5rem;
+    // background-color: darkblue;
+  }
+`;
 
-    &:first-child {
-      position: relative;
-      font-size: 0.85rem;
-      order: 2;
+const Navigation = styled(Nav)`
+  color: white;
+  padding-bottom: 20px;
+
+  @media ${device.md} {
+    & a {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 0.9375rem;
+
+      &:first-child {
+        margin-top: 0.625rem;
+      }
+
+      &:not(last-child) {
+        margin-bottom: 0.625rem;
+      }
+
+      &:last-child {
+        margin-left: 254px;
+        display: flex;
+        justify-content: center;
+        margin-right: 1rem;
+      }
     }
   }
 `;
