@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import { device } from "../src/device";
-import { Send } from 'react-feather';
+import { Send } from "react-feather";
 
 export default function Contact() {
   return (
     <ContactSection>
       <h1 id="Contact">Get In Touch</h1>
-      <p>Always happy to connect with a fellow coder or musician. Feel free to reach out! </p>
+      <p>
+        Always happy to connect with a fellow coder or musician. Feel free to
+        reach out!{" "}
+      </p>
       <a href="mailto:joannathhuang@gmail.com">
         <ContactButton>
-          <Send /> 
+          <Send />
           <span>Say Hello</span>
         </ContactButton>
       </a>
@@ -25,7 +28,8 @@ const ContactSection = styled.section`
     margin-bottom: 2rem;
   }
 
-  & span, svg {
+  & span,
+  svg {
     color: #edf5e1;
   }
 
@@ -50,7 +54,12 @@ const ContactButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    background-image: linear-gradient(150deg, #eadedb 0%, #bc70a4 50%, #bfd641 75%);
+    background-image: linear-gradient(
+      150deg,
+      #eadedb 0%,
+      #bc70a4 50%,
+      #bfd641 75%
+    );
   }
 
   & svg {

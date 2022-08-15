@@ -1,20 +1,35 @@
 import styled from "styled-components";
 import { device } from "../device";
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import alignright from '../../public/images/alignright.svg';
+import { Navbar, Nav, Container } from "react-bootstrap";
+// import alignright from '../../public/images/alignright.svg';
 
 export default function NavBar() {
   return (
-    <NavigationBar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <NavigationBar
+      fixed="top"
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+    >
       <NavContainer>
         {/* <Navbar.Brand href="/">繁</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="justify-content-end"
+        >
           <Navigation>
             <Nav.Link href="#About">About</Nav.Link>
             <Nav.Link href="#Projects">Projects</Nav.Link>
             <Nav.Link href="#Contact">Contact</Nav.Link>
-            <Nav.Link href="https://drive.google.com/file/d/1rSBj68wNNAn7MLEm6LEY1Z8Xevw6mAHE/view?usp=sharing" target="_blank" rel="noreferrer noopener">Resume</Nav.Link>
+            <Nav.Link
+              href="https://drive.google.com/file/d/1rSBj68wNNAn7MLEm6LEY1Z8Xevw6mAHE/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Resume
+            </Nav.Link>
           </Navigation>
         </Navbar.Collapse>
       </NavContainer>
@@ -51,10 +66,6 @@ const NavContainer = styled(Container)`
 
     &:focus {
       box-shadow: none;
-    }
-
-    & span {
-      // background-image: url(${alignright}) !important;
     }
   }
 
